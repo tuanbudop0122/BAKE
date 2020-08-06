@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* 1rem = 12px */
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(68, 68, 138);
+  padding: 3rem 0;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+header .header__logo {
+  font-size: 3rem;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+header .header__nav ul {
+  list-style: none;
+}
+header .header__nav ul li {
+  text-transform: uppercase;
+  margin: 0 1.5rem;
+  display: inline;
+}
+header .header__nav ul li.active a {
+  color: #ff0e83;
+}
+header .header__nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+header .header__nav ul li a:hover {
+  color: #ff0e83;
+}
+/* carousel */
+#carousel {
+  background-image: url(../images/b3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#carousel .carousel__content {
+  color: white;
+  text-align: center;
+}
+#carousel .carousel__content h1 {
+  font-size: 4rem;
+  word-spacing: 0.5rem;
+}
+#carousel .carousel__content p {
+  font-size: 1.3rem;
+}
+#carousel .carousel__content button {
+  border: 1px solid white;
+  padding: 15px 23px;
+  font-size: 1rem;
+  background-color: #ff0e83;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  color: white;
+  transition: all 1s;
+}
+#carousel .carousel__content button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #ff0e83;
+  cursor: pointer;
+}
+
+/* Intro  */
+#Intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#Intro .Intro__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.Intro__tradition {
+  background-color: rgb(68, 68, 138);
+  color: white;
+}
+.Intro__img_1 {
+  grid-column: 2 / span 2;
+}
+.Intro__creativity {
+  background-color: #ff0e83;
+}
+.Intro__item img {
+  width: 100%;
+}
+.Intro__bakebest {
+  background-color: #ed6498;
+  grid-column: 1 / span 2;
+  color: white;
+}
+.Intro__Quality {
+  background-color: #6f42c1;
+  color: white;
+}
+.Intro__TastyCakes {
+  color: white;
+  background-color: #4e2a84;
+}
+.Intro__img_4 {
+  grid-column: 3 / span 2;
+}
+#count {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0;
+}
+#count p {
+  text-align: center;
+  font-size: 30px;
+}
+#count h1 {
+  padding-top: 10px;
+}
+
+/* Service  */
+#service h1 {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 30px;
+}
+#service .service__content {
+  display: flex;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+#service .service__content .service__item i {
+  font-size: 5rem;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #4e2a84;
+  border-radius: 50%;
+  line-height: 100px;
+  text-align: center;
+  transition: all 0.5s;
+  color: #6f42c1;
+}
+#service .service__content .service__item i:hover {
+  color: palevioletred;
+}
+#service .service__content .service__item button {
+  border: 1px solid white;
+  padding: 15px 23px;
+  font-size: 1rem;
+  background-color: #ff0e83;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  color: white;
+  transition: all 1s;
+}
+#service .service__content .service__item button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border: 1px solid #ff0e83;
+}
+
+/* OUR GALLERY */
+#gallery {
+  margin-top: 30px;
+}
+#gallery h1 {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+#gallery .gallery__content {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style: none;
+  cursor: pointer;
+}
+.gallery__img_1 {
+  grid-column: 1 / span 2;
+}
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+}
+.gallery__item {
+  position: relative;
+}
+.gallery__text {
+  background-color: #2b33331a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  padding: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+.gallery__text h3::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: white;
+  margin-top: 20px;
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(50px);
+}
+.gallery__text h3 {
+  transform: translateY(50px);
+  transition: 1s;
+}
+.gallery__text:hover h3 {
+  transform: translateY(0);
+}
+
+.gallery__text p {
+  bottom: 4rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(50px);
+}
+.gallery__text:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery__text:hover h3::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery__img_6 {
+  grid-column: 3 / span 2;
+}
+.team {
+  background-color: #6f42c1;
+  margin-top: 3rem;
+}
+.team__member {
+  display: flex;
+  width: 75%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.team__title {
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+  text-transform: uppercase;
+  padding: 3rem 0;
+  font-weight: bold;
+}
+.team__item__member {
+  position: relative;
+  margin-bottom: 25px;
+}
+.team__member_1 {
+  position: absolute;
+  bottom: 0;
+  background-color: #ff0e83;
+  width: 100%;
+  padding: 2rem;
+  color: white;
+  transition: 1.5s;
+}
+.team__item__member img {
+  width: 100%;
+}
+.overlay {
+  position: absolute;
+  background-color: 00000001;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: all 1s;
+}
+.text h2 {
+  color: #ff0e83;
+}
+.text {
+  position: absolute;
+  left: 10%;
+}
+.text ul {
+  list-style: none;
+}
+.text ul li {
+  display: inline;
+}
+.text ul li i {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  margin: 0.3rem;
+  font-size: 1.5rem;
+}
+.team__item__member:hover .overlay {
+  opacity: 1;
+}
+.team__item__member:hover .team__member_1 {
+  opacity: 0;
+}
+#testimonials {
+  background-image: url(../images/cc1.jpg);
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#testimonials h1 {
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 3rem;
+  font-weight: 900;
+}
+.testimonials__item {
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  border: 4px solid #ff0e83;
+  padding: 3rem 0;
+  margin: 0 4rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+}
+#contact h1 {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.contact__content form {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.form__control {
+  padding: 10px;
+  width: 50%;
+}
+.form__control input {
+  padding: 1rem 0;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 1.5rem 1rem;
+}
+.form__control textarea {
+  width: 100%;
+  font-size: 15px;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.width-100 {
+  width: 100%;
+}
+.form__control button {
+  width: 100%;
+  font-size: 20px;
+  background-color: #ff0e83;
+  padding: 1rem 0;
+  border: none;
+}
+.form__control button:hover {
+  background-color: black;
+  color: white;
+  transition: all 1s;
+  cursor: pointer;
+}
+.backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+.backToTop .backToTopLink {
+  font-size: 4rem;
+  opacity: 0;
+}
+.backToTop .cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.backToTop .cd-top--fade-out {
+  opacity: 0.5;
+}
+.animation {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  animation-name: Tuan;
+  animation-duration: 3s;
+  position: relative;
+  animation-iteration-count: infinite;
+}
+@keyframes Tuan {
+  0% {
+    width: 10%;
+    left: 0;
+    top: 0;
+    background-color: coral;
+  }
+
+  25% {
+    width: 30%;
+    background-color: deeppink;
+    left: 200px 0;
+    top: 0;
+  }
+  50% {
+    width: 50%;
+    top: 200px;
+    left: 200px;
+    background-color: darkgoldenrod;
+  }
+  75% {
+    width: 75%;
+    top: 200px;
+    left: 0;
+    background-color: gold;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}

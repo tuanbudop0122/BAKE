@@ -1,0 +1,35 @@
+nav: menu
+header: Đầu trang
+list-style: none; bỏ dấu chấm trước li
+border : tạo viền 
+cursor: pointer; : tạo bàn tay
+transition: all : delay .
+
+{display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;} :chia cột
+{
+display: flex;
+  align-items: center;
+  justify-content: center;} đưa ra giữa.
+grid-column:  2 / span 2 ; gom cột ( vị trí thứ 2 . gom 2 cột)
+
+:hover : đổi màu khi đưa chuột vào
+{
+position: fixed;
+  width: 100%;} cây menu đi theo.
+
+  z-index: 999; ƯU tiên.
+
+opacity: 0; giấu thẻ(rê chuột vào mới thấy)
+
+display: inline; lên cùng 1 dòng.
+
+{grid-gap: 20px; cách xa nhau.}
+
+
+<form> :...
+
+{display:flex;
+align-seft: center; >> đưa ra giữa theo chiều đứng
+flex-grow: số phần ; chia cột cho phần con 
+}
